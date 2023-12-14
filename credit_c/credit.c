@@ -1,3 +1,22 @@
+/*
+ * Copyright (C) 2023 Alessandro Amatucci Girlanda
+ *
+ * This file is part of Credit.
+ *
+ * Credit is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Credit is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Credit. If not, see <https://www.gnu.org/licenses/>.
+ */
+
 #include <cs50.h>
 #include <math.h>
 #include <stdio.h>
@@ -24,8 +43,7 @@ int main(void)
     do
     {
         user_input = get_long("Number: ");
-    }
-    while (user_input < 0);
+    } while (user_input < 0);
 
     // Find Number of Digits
     unsigned int digits = get_digits(user_input);
@@ -102,7 +120,7 @@ unsigned int get_cardtype(long number, unsigned int digits)
 
     // First Digits Check
     int first_digit = number / pow(10, digits - 1);
-    int second_digit = (int) (number / pow(10, digits - 2)) % 10;
+    int second_digit = (int)(number / pow(10, digits - 2)) % 10;
 
     // Check card type
     // VISA card check
@@ -146,20 +164,20 @@ void print_cardtype(unsigned int card_type)
 {
     switch (card_type)
     {
-        case AMEX:
-            printf("AMEX\n");
-            break;
+    case AMEX:
+        printf("AMEX\n");
+        break;
 
-        case MASTERCARD:
-            printf("MASTERCARD\n");
-            break;
+    case MASTERCARD:
+        printf("MASTERCARD\n");
+        break;
 
-        case VISA:
-            printf("VISA\n");
-            break;
+    case VISA:
+        printf("VISA\n");
+        break;
 
-        default:
-            printf("INVALID\n");
-            break;
+    default:
+        printf("INVALID\n");
+        break;
     }
 }

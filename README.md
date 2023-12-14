@@ -91,3 +91,6 @@ python credit.py
 The project has been developed during an online course with Harvard University.
 
 Harvard University Online Course (edx50) - [Introduction to Computer Science](https://www.edx.org/learn/computer-science/harvard-university-cs50-s-introduction-to-computer-science)
+
+## Licence 🖋️
+This project is licensed under the terms of the GNU General Public License, version 3.0.
